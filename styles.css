@@ -42,6 +42,7 @@
   padding: 1px;
 }
 
+/* The target pseudo-class basically says "when this element is targeted, apply this CSS" */
 #slider-image-1:target ~ .image-container {
   left: 0px;
 }
