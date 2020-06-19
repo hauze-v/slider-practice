@@ -1,0 +1,50 @@
+/* To hide the other images from showing up, use overflow hidden */
+.slider-container {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Add up the width of all your photos and make that the size of your image container */
+.image-container {
+  width: 1500px;
+  height: 500px;
+  position: relative;
+  transition: left 2s;
+}
+
+.slider-image {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* We need to set the top position to -20px so the buttons show up inside the slider */
+.button-container {
+  top: -35px;
+  position: relative;
+}
+
+.slider-button {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
+  background-color: rgb(211,211,211);
+  margin: 0 5px;
+}
+
+/* The target psuedo-class basically says "when this element is targeted, apply this CSS" */
+#slider-image-1:target ~ .image-container {
+  left: 0px;
+}
+
+#slider-image-2:target ~ .image-container {
+  left: -500px;
+}
+
+#slider-image-3:target ~ .image-container {
+  left: -1000px;
+}
