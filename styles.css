@@ -1,0 +1,55 @@
+/* To hide the other images so only one shows up, use overflow hidden */
+.slide-container {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Add up the width of all your images and make that the size of your image-container */
+.image-container {
+  width: 1500px;
+  height: 500px;
+  position: relative;
+  transition: left 2s;
+  -webkit-trainsition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+}
+
+/*  */
+.slider-image {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Set the top to -20px so the buttons show up inside the slider */
+.button-container {
+  top: -20px;
+  position: relative;
+}
+
+/*  */
+.slider-button {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: rgb(211, 211, 211);
+  margin: 0 5px;
+  padding: 1px;
+}
+
+#slider-image-1:target ~ .image-container {
+  left: 0px;
+}
+
+#slider-image-2:target ~ .image-container {
+  left: -500px;
+}
+
+#slider-image-3:target ~ .image-container {
+  left: -1000px;
+}
