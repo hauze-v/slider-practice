@@ -1,30 +1,29 @@
-/* To hide the other images so only one shows up, use overflow hidden */
+/* To hide the extra images inside the slide container, mark overflow to hidden */
 .slide-container {
   width: 500px;
   height: 500px;
-  margin: 0 auto;
   overflow: hidden;
   text-align: center;
+  margin: 0 auto;
 }
 
-/* Add up the width of all your images and make that the size of your image-container */
+/* Set the width to total width of all pictures */
 .image-container {
   width: 1500px;
   height: 500px;
   position: relative;
   transition: left 2s;
-  -webkit-trainsition: left 2s;
-  -moz-transition: left 2s;
-  -o-transition: left 2s;
 }
 
 .slider-image {
   float: left;
+  width: 500px;
+  height: 500px;
   margin: 0px;
   padding: 0px;
 }
 
-/* Set the top to -20px so the buttons show up inside the slider */
+
 .button-container {
   top: -35px;
   position: relative;
@@ -32,15 +31,13 @@
 
 .slider-button {
   display: inline-block;
-  height: 10px;
-  width: 10px;
-  border-radius: 5px;
-  background-color: rgb(211, 211, 211);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(235, 231, 231);
+  border-radius: 10px;
   margin: 0 5px;
-  padding: 1px;
 }
 
-/* The target pseudo-class basically says "when this element is targeted, apply this CSS" */
 #slider-image-1:target ~ .image-container {
   left: 0px;
 }
