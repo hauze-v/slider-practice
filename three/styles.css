@@ -1,0 +1,50 @@
+/* To hide the extra images, we must use overflow hidden */
+.slide-container {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Add up the width of all your pictures and use that for width of the image-container */
+.image-container {
+  width: 1500px;
+  height: 500px;
+  position: relative;
+  transition: left 2s;
+}
+
+/* Be sure to give the images 0 margin and padding so they fit in the container */
+.slider-image {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Set the top to -20px so buttons show up inside slider. Also mark relative */
+.button-container {
+  top: -35px;
+  position: relative;
+}
+
+.slider-button {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(218, 218, 218);
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+#slider-image-1:target ~ .image-container {
+  left: 0px;
+}
+
+#slider-image-2:target ~ .image-container {
+  left: -500px;
+}
+
+#slider-image-3:target ~ .image-container {
+  left: -1000px;
+}
