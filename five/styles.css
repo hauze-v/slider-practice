@@ -1,0 +1,32 @@
+.slide-container {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.image-container {
+  width: 1500px;
+  height: 500px;
+  transition: left 2s;
+  margin: 0px;
+  padding: 0px;
+}
+
+.slider-image {
+  float: left;
+  position: relative;
+}
+
+.button-container {
+  top: -35px;
+  position: relative;
+}
+
+.slider-button {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(230, 227, 227);
+  display: inline-block;
+}
