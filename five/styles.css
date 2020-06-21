@@ -9,14 +9,14 @@
 .image-container {
   width: 1500px;
   height: 500px;
+  position: relative;
   transition: left 2s;
-  margin: 0px;
-  padding: 0px;
 }
 
 .slider-image {
   float: left;
-  position: relative;
+  margin: 0px;
+  padding: 0px;
 }
 
 .button-container {
@@ -25,8 +25,22 @@
 }
 
 .slider-button {
+  display: inline-block;
   height: 20px;
   width: 20px;
   background-color: rgb(230, 227, 227);
-  display: inline-block;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+#slider-image-1:target ~ .image-container {
+  left: 0px;
+}
+
+#slider-image-2:target ~ .image-container {
+  left: -500px;
+}
+
+#slider-image-3:target ~ .image-container {
+  left: -1000px;
 }
